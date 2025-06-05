@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "google_ad_pages",
+  "info": {
+    "singularName": "google-ad-page",
+    "pluralName": "google-ad-pages",
+    "displayName": "google-ad-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "nike_name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "star": {
+      "type": "integer",
+      "required": false,
+      "default": 5,
+      "min": 1,
+      "max": 5
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "publish_date": {
+      "type": "date"
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::google-ad-page.google-ad-page"
+    }
+  }
+}
